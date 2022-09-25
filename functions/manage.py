@@ -79,7 +79,7 @@ class Manage(commands.Cog):
             await ctx.respond(f"{ext_name}.py reloaded")
 
     @slash_command()
-    async def reload_ext(self, ctx: ApplicationContext, ext_name: Option(str)):
+    async def load_ext(self, ctx: ApplicationContext, ext_name: Option(str)):
         if await self.bot.is_owner(ctx.author):
             self.bot.load_extension(f"functions.{ext_name}")
             await ctx.respond(f"{ext_name}.py reloaded")
