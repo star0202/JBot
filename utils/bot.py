@@ -18,6 +18,7 @@ class JBot(commands.Bot):
             debug_guilds=[TEST_GUILD_ID]
         )
         setup_logging()
+        self.cache = []
         self.logger = logging.getLogger(__name__)
         self.start_time = time()
         for filename in os.listdir("functions"):
